@@ -27,6 +27,9 @@ def main():
     word_count = 0
     with open(path_to_file) as f:
         file_contents = f.read()
+        word_count += len(file_contents.split())
+    
+    print(f"There are {word_count} words in the book found in: {path_to_file}.")
         
     dict = create_dict(file_contents)
     book = Book(dict)
